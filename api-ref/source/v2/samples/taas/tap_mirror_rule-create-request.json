@@ -1,0 +1,10 @@
+{
+    "rule": {
+        "priority": 200,
+        "action": "skip",
+        "direction": "IN",
+        "protocol": "tcp",
+        "destination_port_range_min": 443,
+        "destination_port_range_max": 443
+    }
+}

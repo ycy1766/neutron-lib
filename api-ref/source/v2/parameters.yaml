@@ -345,6 +345,12 @@ tag:
   in: path
   required: true
   type: string
+tap_mirror_rule_id-path:
+  description: |
+    The ID of the Tap Mirror rule.
+  in: path
+  required: true
+  type: string
 trunk_id:
   description: |
     The ID of the trunk.
@@ -7405,6 +7411,162 @@ tap_mirror_port_id:
   in: body
   required: true
   type: string
+tap_mirror_rule:
+  description: |
+    A ``rule`` object of a Tap Mirror.
+  in: body
+  required: true
+  type: object
+tap_mirror_rule_action:
+  description: |
+    The action of the rule, ``mirror`` or ``skip``.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_action-request:
+  description: |
+    The action of the rule, ``mirror`` (default) or ``skip``.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_destination_ip_prefix:
+  description: |
+    The destination IP prefix (CIDR) matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_destination_ip_prefix-request:
+  description: |
+    The destination IP prefix (CIDR) matched by the rule.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_destination_port_range_max:
+  description: |
+    The maximum destination port matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: integer
+tap_mirror_rule_destination_port_range_max-request:
+  description: |
+    The maximum destination port (1-65535) matched by the rule. Requires
+    ``protocol`` ``tcp``, ``udp`` or ``sctp``.
+  in: body
+  required: false
+  type: integer
+tap_mirror_rule_destination_port_range_min:
+  description: |
+    The minimum destination port matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: integer
+tap_mirror_rule_destination_port_range_min-request:
+  description: |
+    The minimum destination port (1-65535) matched by the rule. Requires
+    ``protocol`` ``tcp``, ``udp`` or ``sctp``.
+  in: body
+  required: false
+  type: integer
+tap_mirror_rule_direction:
+  description: |
+    The direction the rule applies to, ``IN``, ``OUT`` or ``null`` for
+    every direction the Tap Mirror copies.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_direction-request:
+  description: |
+    The direction the rule applies to, ``IN`` or ``OUT``. Default is
+    ``null``: every direction the Tap Mirror copies. The direction must be
+    mirrored by the Tap Mirror.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_ethertype:
+  description: |
+    The ethertype matched by the rule, ``IPv4``, ``IPv6`` or ``null`` for
+    every frame.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_ethertype-request:
+  description: |
+    The ethertype matched by the rule, ``IPv4`` or ``IPv6``. Default is
+    ``null``: every frame, or the family of the given IP prefixes.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_id:
+  description: |
+    The ID of the Tap Mirror rule.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_priority:
+  description: |
+    The priority of the rule, 1-32767. A rule with a higher priority is
+    evaluated first.
+  in: body
+  required: true
+  type: integer
+tap_mirror_rule_protocol:
+  description: |
+    The IP protocol matched by the rule, ``tcp``, ``udp``, ``sctp``,
+    ``icmp``, ``ipv6-icmp`` or ``null``.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_protocol-request:
+  description: |
+    The IP protocol matched by the rule, ``tcp``, ``udp``, ``sctp``,
+    ``icmp`` or ``ipv6-icmp``.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_source_ip_prefix:
+  description: |
+    The source IP prefix (CIDR) matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: string
+tap_mirror_rule_source_ip_prefix-request:
+  description: |
+    The source IP prefix (CIDR) matched by the rule.
+  in: body
+  required: false
+  type: string
+tap_mirror_rule_source_port_range_max:
+  description: |
+    The maximum source port matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: integer
+tap_mirror_rule_source_port_range_max-request:
+  description: |
+    The maximum source port (1-65535) matched by the rule. Requires
+    ``protocol`` ``tcp``, ``udp`` or ``sctp``.
+  in: body
+  required: false
+  type: integer
+tap_mirror_rule_source_port_range_min:
+  description: |
+    The minimum source port matched by the rule, or ``null``.
+  in: body
+  required: true
+  type: integer
+tap_mirror_rule_source_port_range_min-request:
+  description: |
+    The minimum source port (1-65535) matched by the rule. Requires
+    ``protocol`` ``tcp``, ``udp`` or ``sctp``.
+  in: body
+  required: false
+  type: integer
+tap_mirror_rules:
+  description: |
+    A list of ``rule`` objects of a Tap Mirror.
+  in: body
+  required: true
+  type: array
 tap_service_id:
   description: |
     Tap Service to which the Tap Flow belongs.
