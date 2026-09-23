@@ -1,0 +1,12 @@
+---
+features:
+  - |
+    Add the ``tap-mirror-rules`` API definition for Tap-as-a-Service. It
+    defines the ``rules`` sub-resource of ``tap_mirrors`` used to select the
+    traffic mirrored by an ``lport`` tap mirror: priority ordered (1-32767)
+    ``mirror``/``skip`` rules described by an optional ``direction`` (``IN``
+    or ``OUT``, both when unset), ethertype, protocol, IP prefixes and port
+    ranges, mapping to the OVN ``Mirror_Rule`` table available since OVN
+    25.09. The definition requires the ``tap-mirror-lport`` extension. New
+    exceptions are added to ``neutron_lib.exceptions.taas`` for the
+    validation of the rules.

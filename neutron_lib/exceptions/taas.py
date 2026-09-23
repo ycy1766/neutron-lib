@@ -93,3 +93,26 @@ class TapMirrorTunnelIdRequired(qexception.InvalidInput):
 class TapMirrorLportPortInUse(qexception.Conflict):
     message = _("Port %(port_id)s already has an lport Tap Mirror for "
                 "direction %(direction)s")
+
+
+class TapMirrorRuleNotFound(qexception.NotFound):
+    message = _("Tap Mirror rule %(rule_id)s does not exist")
+
+
+class TapMirrorRulesNotSupported(qexception.InvalidInput):
+    message = _("Tap Mirror %(mirror_id)s of type %(mirror_type)s does not "
+                "support rules")
+
+
+class TapMirrorRuleConflict(qexception.Conflict):
+    message = _("Tap Mirror %(mirror_id)s already has a rule with priority "
+                "%(priority)s and the same match")
+
+
+class TapMirrorRuleInvalidPortRange(qexception.InvalidInput):
+    message = _("Invalid port range in Tap Mirror rule: %(reason)s")
+
+
+class TapMirrorRuleDirectionNotMirrored(qexception.InvalidInput):
+    message = _("Tap Mirror %(mirror_id)s does not mirror direction "
+                "%(direction)s")
