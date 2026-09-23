@@ -62,3 +62,34 @@ class TapMirrorNotFound(qexception.NotFound):
 
 class TapMirrorTunnelConflict(qexception.Conflict):
     message = _("Tap Mirror with tunnel_id %(tunnel_id)s already exists")
+
+
+class TapMirrorRemotePortRequired(qexception.InvalidInput):
+    message = _("Tap Mirror of type %(mirror_type)s requires remote_port_id")
+
+
+class TapMirrorRemoteIpRequired(qexception.InvalidInput):
+    message = _("Tap Mirror of type %(mirror_type)s requires remote_ip")
+
+
+class TapMirrorRemotePortNotAllowed(qexception.InvalidInput):
+    message = _("Tap Mirror of type %(mirror_type)s does not accept "
+                "remote_port_id")
+
+
+class TapMirrorSameSourceAndRemotePort(qexception.InvalidInput):
+    message = _("Tap Mirror source port and remote port must differ")
+
+
+class TapMirrorRemotePortNotBound(qexception.InvalidInput):
+    message = _("Tap Mirror remote port %(port_id)s is not bound to a host")
+
+
+class TapMirrorTunnelIdRequired(qexception.InvalidInput):
+    message = _("Tap Mirror of type %(mirror_type)s requires a tunnel ID for "
+                "direction %(direction)s")
+
+
+class TapMirrorLportPortInUse(qexception.Conflict):
+    message = _("Port %(port_id)s already has an lport Tap Mirror for "
+                "direction %(direction)s")
