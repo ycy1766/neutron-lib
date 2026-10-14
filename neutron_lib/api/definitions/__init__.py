@@ -75,6 +75,7 @@ from neutron_lib.api.definitions import l3_ndp_proxy
 from neutron_lib.api.definitions import l3_port_ip_change_not_allowed
 from neutron_lib.api.definitions import local_ip
 from neutron_lib.api.definitions import logging
+from neutron_lib.api.definitions import logging_output_type
 from neutron_lib.api.definitions import metering
 from neutron_lib.api.definitions import metering_source_and_destination_filters
 from neutron_lib.api.definitions import multiprovidernet
@@ -242,6 +243,7 @@ _ALL_API_DEFINITIONS = {
     l3_port_ip_change_not_allowed,
     local_ip,
     logging,
+    logging_output_type,
     metering,
     metering_source_and_destination_filters,
     multiprovidernet,

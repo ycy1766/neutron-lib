@@ -1,0 +1,9 @@
+---
+features:
+  - |
+    Added the ``logging-output-type`` API definition. It adds the
+    ``output_type`` attribute to the ``log`` resource, with the values
+    ``packet_log`` (the default and the previous behavior) and
+    ``flow_sample``, and the ``output_types`` attribute to the
+    ``loggable_resources`` response. The attribute is set on creation and
+    cannot be updated.

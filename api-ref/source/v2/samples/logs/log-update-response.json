@@ -12,6 +12,7 @@
         "resource_type": "security_group",
         "resource_id": null,
         "target_id": null,
-        "event": "DROP"
+        "event": "DROP",
+        "output_type": "packet_log"
     }
 }

@@ -1,7 +1,11 @@
 {
     "loggable_resources": [
         {
-            "type": "security_group"
+            "type": "security_group",
+            "output_types": [
+                "packet_log",
+                "flow_sample"
+            ]
         }
     ]
 }

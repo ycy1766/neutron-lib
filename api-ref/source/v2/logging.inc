@@ -7,6 +7,13 @@ Log resource
 The ``logging`` extension lists, creates, shows information for, and updates
 log resource.
 
+Log output type
+===============
+
+The ``logging-output-type`` extension adds the ``output_type`` attribute to
+the ``log`` resource and the ``output_types`` attribute to the
+``loggable_resource`` objects.
+
 Resource timestamps
 ===================
 
@@ -43,6 +50,7 @@ Request
    - resource_type: resource_log_type-query
    - resource_id: resource_log_id-query
    - target_id: resource_target_log_id-query
+   - output_type: log_output_type-query
    - enabled: log_enabled-query
    - sort_dir: sort_dir
    - sort_key: log-sort_key
@@ -65,6 +73,7 @@ Response Parameters
    - resource_type: resource_log_type
    - resource_id: resource_log_id
    - target_id: resource_target_log_id
+   - output_type: log_output_type
    - updated_at: updated_at_resource
    - enabled: log_enabled
 
@@ -110,6 +119,7 @@ Request
    - resource_type: resource_log_type
    - resource_id: resource_log_id-request
    - target_id: resource_target_log_id-request
+   - output_type: log_output_type-request
    - enabled: log_enabled-request
 
 Request Example
@@ -135,6 +145,7 @@ Response Parameters
    - resource_type: resource_log_type
    - resource_id: resource_log_id
    - target_id: resource_target_log_id
+   - output_type: log_output_type
    - updated_at: updated_at_resource
    - enabled: log_enabled
 
@@ -181,6 +192,7 @@ Response Parameters
    - resource_type: resource_log_type
    - resource_id: resource_log_id
    - target_id: resource_target_log_id
+   - output_type: log_output_type
    - updated_at: updated_at_resource
    - enabled: log_enabled
 
@@ -235,6 +247,7 @@ Response Parameters
    - resource_type: resource_log_type
    - resource_id: resource_log_id
    - target_id: resource_target_log_id
+   - output_type: log_output_type
    - updated_at: updated_at_resource
    - enabled: log_enabled
 
@@ -294,6 +307,7 @@ Response Parameters
 
    - loggable_resources: loggable_resources
    - type: resource_log_type
+   - output_types: loggable_resource_output_types
 
 Response Example
 ----------------

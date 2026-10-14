@@ -12,6 +12,7 @@
         "resource_id": null,
         "revision_number": 1,
         "target_id": null,
-        "event": "ALL"
+        "event": "ALL",
+        "output_type": "packet_log"
     }
 }

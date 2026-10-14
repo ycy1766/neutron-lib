@@ -870,6 +870,13 @@ log_event-query:
   in: query
   required: false
   type: string
+log_output_type-query:
+  description: |
+    Filter the log list result by the output type, which is
+    ``packet_log`` or ``flow_sample``.
+  in: query
+  required: false
+  type: string
 mac_address-query:
   description: |
     Filter the port list result by the MAC address of the port.
@@ -4586,6 +4593,30 @@ log_id:
   in: body
   required: true
   type: string
+log_output_type:
+  description: |
+    The output of the log. ``packet_log`` emits one log line per matched
+    packet. ``flow_sample`` emits samples of the matched traffic through
+    the backend's sampling mechanism.
+  in: body
+  required: true
+  type: string
+log_output_type-request:
+  description: |
+    The output of the log. ``packet_log`` emits one log line per matched
+    packet. ``flow_sample`` emits samples of the matched traffic through
+    the backend's sampling mechanism. Default is ``packet_log``. The value
+    cannot be changed after the log is created.
+  in: body
+  required: false
+  type: string
+loggable_resource_output_types:
+  description: |
+    The log output types supported for this resource type, for example
+    ``["packet_log", "flow_sample"]``.
+  in: body
+  required: true
+  type: array
 loggable_resources:
   description: |
     A list of ``loggable_resource`` object.
